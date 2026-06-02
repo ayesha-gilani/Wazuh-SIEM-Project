@@ -50,7 +50,7 @@ The architecture consists of a central Wazuh Manager installed on an Ubuntu serv
 
 ---
 
-## 🔍 6. Threat Monitoring & Event Generation (Use Cases Verified)
+## 🔍 6. Threat Monitoring & Event Generation (Validated Use Cases)
 
 ### 6.1 Authentication Failure & Brute Force Tracking
 * **Methodology**: Executed consecutive unauthorized login attempts across Windows target nodes to generate security event generation sequences. Wazuh monitored the authentication event logs and flagged the malicious patterns.
