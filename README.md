@@ -45,7 +45,7 @@ The architecture consists of a central Wazuh Manager installed on an Ubuntu serv
 3. **FIM Modules**: Configured direct directory tracking hooks.
 4. **Threat Intelligence**: Linked VirusTotal query blocks directly to the log parsing engine.
 
-![Wazuh Server Status](screenshots/services_running.png)
+![Wazuh Server Status](Screenshots/services_running.PNG)
 *Figure: Verification of running operational services on the central Ubuntu manager node.*
 
 ---
@@ -55,40 +55,42 @@ The architecture consists of a central Wazuh Manager installed on an Ubuntu serv
 ### 6.1 Authentication Failure & Brute Force Tracking
 * **Methodology**: Executed consecutive unauthorized login attempts across Windows target nodes to generate security event generation sequences. Wazuh monitored the authentication event logs and flagged the malicious patterns.
 * **Alert Proof**:
-  ![Failed Login Event Log](screenshots/failed_login_alert.png)
+  ![Failed Login Event Log](Screenshots/failed_login_alert.PNG)
   *Figure: Threat Hunting log stream capturing consecutive Windows Logon Failures (Rule ID 60122).*
+
 ### 6.2 Cross-Platform File Integrity Monitoring (FIM)
 * **Methodology**: Modified configuration nodes on Linux targets and interacted with directories on Windows assets to verify real-time path monitoring behaviors.
 * **Alert Proof**:
-  ![Granular Event Timeline](screenshots/event_timeline.png)
+  ![Granular Event Timeline](Screenshots/event_timeline.PNG)
   *Figure: Chronological event trace capturing active FIM metadata updates and file creation steps across endpoints.*
 
 ### 6.3 Threat Intelligence Enrichment (VirusTotal Integration)
 * **Methodology**: Configured automatic hash evaluation pipelines. When files are modified inside monitored watchlists, file hashes are immediately transmitted to the VirusTotal engine to parse for malicious characteristics.
 * **Alert Proof**:
-  ![VirusTotal Detailed Alert Logs](screenshots/virustotal_alert_details.png)
+  ![VirusTotal Detailed Alert Logs](Screenshots/virustotal_alert_details.PNG)
   *Figure: Security log grid capturing VirusTotal API query actions (Rule IDs 87103, 87104) analyzing live file updates.*
 
 ### 6.4 Security Configuration Assessment (SCA) Compliance Audits
 * **Methodology**: Enabled system baseline testing policies to score target node hardening states against verified regulatory industry definitions.
 * **Alert Proof**:
-  ![SCA Windows 10 CIS Benchmark Auditing](screenshots/sca_windows_compliance.png)
+  ![SCA Windows 10 CIS Benchmark Auditing](Screenshots/sca_windows_compliance.PNG)
   *Figure: Windows 10 compliance engine metrics displaying hardening success rates against standard CIS Benchmarks.*
 
 ---
 
 ## 📊 7. Dashboard Analytics & Framework Mapping
+
 ### 7.1 Central Threat Hunting Control Plane
 The main SIEM interface compiles incoming environment logs into high-level analytic boards mapping threat vectors directly to tactical frameworks.
-![Wazuh Threat Hunting Dashboard Overview](screenshots/dashboard_overview.png)
+![Wazuh Threat Hunting Dashboard Overview](Screenshots/dashboard_overview.PNG)
 *Figure: Threat hunting operational dashboard consolidating network security health metrics.*
 
 ### 7.2 MITRE ATT&CK Matrix Mapping
 Incoming telemetry streams are automatically matched to structural threat categories within the open-source MITRE ATT&CK adversarial tracking framework.
-![MITRE ATT&CK Framework Mapping Dashboard](screenshots/mitre_attack_dashboard.png)
+![MITRE ATT&CK Framework Mapping Dashboard](Screenshots/mitre_attack_dashboard.PNG)
 *Figure: Graphic chart parsing active target endpoint behaviors into MITRE tactical designations.*
 
-![MITRE ATT&CK Framework Matrix View](screenshots/mitre_attack_matrix.png)
+![MITRE ATT&CK Framework Matrix View](Screenshots/mitre_attack_matrix.PNG)
 *Figure: Structural matrix index detailing specific active adversarial techniques observed within the test environment.*
 
 ---
